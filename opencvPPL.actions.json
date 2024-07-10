@@ -1,0 +1,155 @@
+{
+
+
+    "action_open": {
+        "title": "Open" , "description": "Abre la imagen"
+        , "params": {
+            "file_path": { "description": "fichero a abrir", "variable": 0 }
+        }
+        , "history": 1, "modify": 0
+    }
+    , "action_save": {
+        "title": "Save" , "description": "Guarda la imagen"
+        , "params": {}
+        , "history": 1, "modify": 0
+    }
+    , "action_zoom_in": {
+        "title": "Zoom +", "description": "Aumenta la resolución mostrada de la imagen"
+        , "params": {}
+        , "history": 0, "modify": 0
+    }
+    , "action_zoom_out": {
+        "title": "Zoom -", "description": "Disminuye la resolución mostrada de la imagen"
+        , "params": {}
+        , "history": 0, "modify": 0
+    }
+
+
+
+
+    , "action_upSize": {
+        "title": "Up Size", "description": "Aumenta el tamaño de la imagen"
+        , "method": "UpSize"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "factor": { "description": "Factor de tamaño", "initValue": 2, "key": "s", "increment": 1, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    
+    , "action_downSize": {
+        "title": "Down Size", "description": "Reduce el tamaño de la imagen"
+        , "method": "downSize"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "factor": { "description": "Factor de tamaño", "initValue": 2, "key": "s", "increment": 1, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+
+    , "action_colorToGray": {
+        "title": "B & N", "description": "Convierte la imagen a valores blanco y negro de 1 canal"
+        , "method": "colorToGray"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_blurGauss": {
+        "title": "Blur Gauss", "description": "BLUR GAUSS con el kernelSize x kernelSize"
+        , "method": "blurGauss"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "kernelSize": { "description": "Tamaño del kernel a aplicar", "initValue": 5, "key": "k", "increment": 2, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_blurMedian": {
+        "title": "Blur Med", "description": "BLUR MEDIANA con el kernelSize: eliminar ruido de tipo sal y pimienta (filtro estadístico costoso)"
+        , "method": "blurMedian"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "kernelSize": { "description": "Tamaño del kernel a aplicar", "initValue": 5, "key": "k", "increment": 2, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_filterMin": {
+        "title": "Filter Min", "description": "Filtro de mínimo: selecciona el valor más pequeño de la vecindad. elimina el ruido de sal (píxeles blancos) oscurece la imagen."
+        , "method": "filterMin"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "kernelSize": { "description": "Tamaño del kernel a aplicar", "initValue": 5, "key": "k", "increment": 2, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_filterMax": {
+        "title": "Filter Max", "description": " Filtro de máximo: selecciona el valor más grande de la vecindad. elimina el ruido de pimienta(píxeles negros). aclara la imagen."
+        , "method": "filterMax"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "kernelSize": { "description": "Tamaño del kernel a aplicar", "initValue": 5, "key": "k", "increment": 2, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_sobel_VERT": {
+        "title": "Sobel V", "description": " BORDES: Detecta bordes VERTICALES por SOBEL:   img (necesaria en ESCALA DE GRISES)."
+        , "method": "sobel_VERT"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_sobel_HOR": {
+        "title": "Sobel H", "description": " BORDES: Detecta bordes HORIZONTALES por SOBEL:   img (necesaria en ESCALA DE GRISES)."
+        , "method": "sobel_HOR"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+        }
+        , "history": 1, "modify": 1
+    }
+
+
+    
+
+
+
+
+
+    , "action_sobel_FULL": {
+        "title": "Sobel Full", "description": " BORDES: Detecta bordes por SOBEL:   img (necesaria en ESCALA DE GRISES)."
+        , "method": "sobelFull"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "invert": { "description": "Invertir los niveles de gris del gradiente", "initValue": 1, "key": "i", "increment": 1, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_canny": {
+        "title": "Canny", "description": " BORDES: Detecta bordes por Canny:  img (necesaria en ESCALA DE GRISES)"
+        , "method": "canny"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "treshold_1": { "description": "umbral mínimo", "initValue": 80, "key": "r", "increment": 10, "variable": 1 }
+            , "treshold_2": { "description": "umbral máximo", "initValue": 80, "key": "t", "increment": 10, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+    , "action_treshold": {
+        "title": "Treshold", "description": " UMBRALIZACION: Mapa binario de bordes: los que superen el umbra se les asigna 255, el resto 0    img (necesaria en ESCALA DE GRISES)"
+        , "method": "threshold"
+        , "params": {
+            "img": { "description": "Imagen a modificar", "variable": 0 }
+            , "treshold": { "description": "Nivel a partir del cual se anula", "initValue": 127, "key": "t", "increment": 3, "variable": 1 }
+        }
+        , "history": 1, "modify": 1
+    }
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "actionName": "action_filterMin",
+        "actionParams": {
+            "kernelSize": 7
+        }
+    },
+    {
+        "actionName": "action_filterMax",
+        "actionParams": {
+            "kernelSize": 5
+        }
+    }
+]

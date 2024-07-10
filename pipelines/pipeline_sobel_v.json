@@ -1,0 +1,22 @@
+[
+    {
+        "actionName": "action_downSize",
+        "actionParams": {
+            "factor": 2
+        }
+    },
+    {
+        "actionName": "action_filterMax",
+        "actionParams": {
+            "kernelSize": 5
+        }
+    },
+    {
+        "actionName": "action_colorToGray",
+        "actionParams": {}
+    },
+    {
+        "actionName": "action_sobel_VERT",
+        "actionParams": {}
+    }
+]

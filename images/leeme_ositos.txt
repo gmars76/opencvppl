@@ -1,0 +1,1 @@
+La imagen original se encuentra en el fichero "ositos.jpg". La imagen transformada se encuentra en el fIchero "ositos-rosas.jpg". Como se puede apreciar, la imagen transformada contiene los mismos elementos que la imagen original, pero coloreados de un color fijo rosa con las siguientes componentes: R=255, G=174 y B=201.

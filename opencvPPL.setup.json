@@ -1,0 +1,64 @@
+{
+    "appTitle": "OpenCV PiPeLine"
+    ,"backgroundColor": "#cccccc"
+
+    , "main_viewport_dim": {
+        "name": "main_window"
+    }
+
+    , "font_text": {
+        "name": "arial"
+        , "size": 10
+        , "weight": "normal"
+    }
+
+
+
+    , "mnu_main": {
+    }
+
+
+
+    , "panel_base": {
+        "borderwidth": "3"
+        , "bgcolor": "#d3d3d3"
+        , "title_bgcolor": "#1a0dab"
+    }
+    , "panel_tools": {
+        "geometry": "100x500+20+100"
+        , "title": "Herramientas"
+        , "btns_padx": 2
+        , "btns_pady": 0
+    }
+    , "panel_info": {
+        "geometry": "500x200+800+100"
+        , "title": "Info"
+        , "text_bg_color": "#1f1f1f"
+        , "text_fg_color": "#b3f3b3"
+        , "text_height": 10
+    }
+    , "panel_actions": {
+        "geometry": "300x400+800+320"
+        , "title": "Acciones"
+        , "bg_color": "#b2b2b2"
+        , "text_bg_color": "#f1f1f1"
+        , "text_fg_color": "#333333"
+        , "text_height": 10
+        , "hist_fg_color": "#ffffff"
+        , "hist_ON_bg_color": "#00a448"
+        , "hist_OFF_bg_color": "#884e41"
+        , "hist_CURR_bg_color": "#e38c1d"
+    }
+    
+
+
+
+    , "viewportManager_base": {
+    }
+    , "viewport_base": {
+        "zoom_ini": 1
+    }
+
+
+
+}
